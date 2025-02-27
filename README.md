@@ -4,14 +4,13 @@ Este proyecto es una comparación de componentes entre Flutter y React Native ut
 
 ## Características
 - Navegación entre componentes con ejemplos visuales.
-- Implementación de una lista de usuarios con `FlatList` y avatares de `pravatar`.
 - Diseño optimizado con `Card` y `ScrollView`.
 
 ## Instalación
 1. Clonar el repositorio:
    ```sh
-   git clone <repo-url>
-   cd <project-folder>
+   git clone [<repo-url>](https://github.com/LlomenYT/flutter-to-react-native)
+   cd flutter-to-react-native
    ```
 2. Instalar dependencias:
    ```sh
@@ -26,6 +25,7 @@ Este proyecto es una comparación de componentes entre Flutter y React Native ut
 ```
 /
 ├── components/        # Componentes individuales con ejemplos
+├── utils/        # Utils comunes
 ├── navigation/        # Configuración de navegación
 └── App.tsx            # Punto de entrada principal
 ```
