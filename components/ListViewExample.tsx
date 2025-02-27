@@ -8,13 +8,12 @@ type User = {
     avatarUrl: string;
 };
 
-// Generar usuarios ficticios con avatares de Pravatar
 const data: User[] = [
     {
         key: '1',
         name: 'John Doe',
         email: 'johndoe@example.com',
-        avatarUrl: 'https://i.pravatar.cc/150?img=1', // Avatar generado por Pravatar
+        avatarUrl: 'https://i.pravatar.cc/150?img=1',
     },
     {
         key: '2',
@@ -33,8 +32,7 @@ const data: User[] = [
         name: 'Emily White',
         email: 'emilywhite@example.com',
         avatarUrl: 'https://i.pravatar.cc/150?img=4',
-    },
-    // Puedes agregar más usuarios
+    }
 ];
 
 const ListViewExample: React.FC = () => (

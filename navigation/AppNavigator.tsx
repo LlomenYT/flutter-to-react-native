@@ -2,7 +2,12 @@ import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
-import { ContainerExample, ListViewExample, RaisedButtonExample, TextFieldExample, ViewExample } from '../components';
+import {
+    ContainerExample,
+    ListViewExample,
+    RaisedButtonExample,
+    TextFieldExample
+} from '../components';
 
 type HomeScreenNavigationProp = {
     navigate: (screen: string) => void;
@@ -31,24 +36,29 @@ const HomeScreen: React.FC<{ navigation: HomeScreenNavigationProp }> = ({ naviga
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.optionCard} onPress={() => navigation.navigate('TextField')}>
-            <Text style={styles.optionTitle}>TextField</Text>
+            <Text style={styles.optionTitle}>
+                <Text style={styles.flutterColor}>TextField</Text>
+                <Text style={styles.reactNativeColor}> - TextInput</Text>
+            </Text>
             <Text style={styles.optionDescription}>Ejemplo de un campo de texto para ingresar información.</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.optionCard} onPress={() => navigation.navigate('RaisedButton')}>
-            <Text style={styles.optionTitle}>RaisedButton</Text>
+            <Text style={styles.optionTitle}>
+                <Text style={styles.flutterColor}>RaisedButton</Text>
+                <Text style={styles.reactNativeColor}> - Pressable</Text>
+            </Text>
             <Text style={styles.optionDescription}>Un botón interactivo con efecto de elevación.</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.optionCard} onPress={() => navigation.navigate('Container')}>
-            <Text style={styles.optionTitle}>Container</Text>
+            <Text style={styles.optionTitle}>
+                <Text style={styles.flutterColor}>Container</Text>
+                <Text style={styles.reactNativeColor}> - View</Text>
+            </Text>
             <Text style={styles.optionDescription}>Un contenedor básico con padding y espaciado.</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.optionCard} onPress={() => navigation.navigate('View')}>
-            <Text style={styles.optionTitle}>View</Text>
-            <Text style={styles.optionDescription}>Un ejemplo de cómo usar un View para contener elementos.</Text>
-        </TouchableOpacity>
     </ScrollView>
 );
 
@@ -59,7 +69,6 @@ const AppNavigator = createStackNavigator(
         TextField: TextFieldExample,
         RaisedButton: RaisedButtonExample,
         Container: ContainerExample,
-        View: ViewExample,
     },
     {
         initialRouteName: 'Home',

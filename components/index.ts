@@ -1,4 +1,3 @@
-export { default as ViewExample } from './ViewExample';
 export { default as RaisedButtonExample } from './RaisedButtonExample';
 export { default as ContainerExample } from './ContainerExample';
 export { default as TextFieldExample } from './TextFieldExample';
